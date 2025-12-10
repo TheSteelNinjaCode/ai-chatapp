@@ -1,0 +1,23 @@
+{
+  "name": "tsnc/prisma-php-app",
+  "type": "project",
+  "version": "1.0.0",
+  "require": {
+    "php": "^8.2",
+    "vlucas/phpdotenv": "5.6.2",
+    "firebase/php-jwt": "6.11.1",
+    "phpmailer/phpmailer": "7.0.0",
+    "guzzlehttp/guzzle": "7.10.0",
+    "symfony/uid": "7.3.1",
+    "brick/math": "0.14.1",
+    "tsnc/prisma-php": "1.0.0",
+    "gehrisandro/tailwind-merge-php": "^1.1",
+    "php-mcp/server": "^3.3",
+    "calicastle/cuid": "2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}

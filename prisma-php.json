@@ -1,0 +1,24 @@
+{
+  "projectName": "ai-chatapp",
+  "projectRootPath": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp",
+  "phpEnvironment": "XAMPP",
+  "phpRootPathExe": "C:\\xampp\\php\\php.exe",
+  "bsTarget": "http://localhost/projects/prisma-php/posts/ai-chatapp/",
+  "bsPathRewrite": {
+    "^/": "/projects/prisma-php/posts/ai-chatapp/"
+  },
+  "backendOnly": false,
+  "swaggerDocs": false,
+  "tailwindcss": true,
+  "websocket": false,
+  "mcp": true,
+  "prisma": true,
+  "docker": false,
+  "typescript": true,
+  "version": "4.0.14",
+  "componentScanDirs": [
+    "src",
+    "vendor/tsnc/prisma-php/src"
+  ],
+  "excludeFiles": []
+}
