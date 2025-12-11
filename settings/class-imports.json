@@ -1,137 +1,275 @@
 {
+  "MessageSquare": [
+    {
+      "className": "Lib\\PPIcons\\MessageSquare",
+      "filePath": "Lib\\PPIcons\\MessageSquare.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
+    }
+  ],
+  "Config": [
+    {
+      "className": "app\\_components\\Config",
+      "filePath": "app\\_components\\Config.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
+    }
+  ],
+  "SelectAIModel": [
+    {
+      "className": "app\\_components\\SelectAIModel",
+      "filePath": "app\\_components\\SelectAIModel.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
+    }
+  ],
   "ToggleTheme": [
     {
       "className": "app\\_components\\ToggleTheme",
       "filePath": "app\\_components\\ToggleTheme.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\app\\index.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
     }
   ],
-  "Moon": [
+  "Select": [
     {
-      "className": "Lib\\PPIcons\\Moon",
-      "filePath": "Lib\\PPIcons\\Moon.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\app\\_components\\ToggleTheme.php"
+      "className": "Lib\\PHPXUI\\Select",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\Config.php"
+    },
+    {
+      "className": "Lib\\PHPXUI\\Select",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
     }
   ],
-  "SunMoon": [
+  "SelectContent": [
     {
-      "className": "Lib\\PPIcons\\SunMoon",
-      "filePath": "Lib\\PPIcons\\SunMoon.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\app\\_components\\ToggleTheme.php"
+      "className": "Lib\\PHPXUI\\SelectContent",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\Config.php"
+    },
+    {
+      "className": "Lib\\PHPXUI\\SelectContent",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
+    }
+  ],
+  "SelectItem": [
+    {
+      "className": "Lib\\PHPXUI\\SelectItem",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\Config.php"
+    },
+    {
+      "className": "Lib\\PHPXUI\\SelectItem",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
     }
   ],
   "PHPX": [
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\app\\_components\\ToggleTheme.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\Config.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PHPXUI\\Button.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PHPXUI\\Portal.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\ToggleTheme.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PHPXUI\\Slot.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Button.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\ArrowLeft.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Portal.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\ArrowRight.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Select.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\Calendar.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Slot.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\Check.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\ArrowLeft.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronDown.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\ArrowRight.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronLeft.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Calendar.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronRight.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Check.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronsUpDown.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronDown.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronUp.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronLeft.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\Circle.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronRight.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\Ellipsis.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronsUpDown.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\Minus.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\ChevronUp.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\Moon.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Circle.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\PanelLeft.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Ellipsis.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\Search.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\MessageSquare.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\SunMoon.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Minus.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PPIcons\\X.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Moon.php"
+    },
+    {
+      "className": "PP\\PHPX\\PHPX",
+      "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\PanelLeft.php"
+    },
+    {
+      "className": "PP\\PHPX\\PHPX",
+      "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Search.php"
+    },
+    {
+      "className": "PP\\PHPX\\PHPX",
+      "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\SunMoon.php"
+    },
+    {
+      "className": "PP\\PHPX\\PHPX",
+      "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\X.php"
+    }
+  ],
+  "SelectGroup": [
+    {
+      "className": "Lib\\PHPXUI\\SelectGroup",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
+    }
+  ],
+  "SelectLabel": [
+    {
+      "className": "Lib\\PHPXUI\\SelectLabel",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
+    }
+  ],
+  "SelectTrigger": [
+    {
+      "className": "Lib\\PHPXUI\\SelectTrigger",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
+    }
+  ],
+  "SelectValue": [
+    {
+      "className": "Lib\\PHPXUI\\SelectValue",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
+    }
+  ],
+  "Moon": [
+    {
+      "className": "Lib\\PPIcons\\Moon",
+      "filePath": "Lib\\PPIcons\\Moon.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\ToggleTheme.php"
+    }
+  ],
+  "SunMoon": [
+    {
+      "className": "Lib\\PPIcons\\SunMoon",
+      "filePath": "Lib\\PPIcons\\SunMoon.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\ToggleTheme.php"
     }
   ],
   "Slot": [
     {
       "className": "Lib\\PHPXUI\\Slot",
       "filePath": "Lib\\PHPXUI\\Slot.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\Lib\\PHPXUI\\Button.php"
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Button.php"
+    },
+    {
+      "className": "Lib\\PHPXUI\\Slot",
+      "filePath": "Lib\\PHPXUI\\Slot.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Select.php"
+    }
+  ],
+  "Portal": [
+    {
+      "className": "Lib\\PHPXUI\\Portal",
+      "filePath": "Lib\\PHPXUI\\Portal.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Select.php"
+    }
+  ],
+  "Check": [
+    {
+      "className": "Lib\\PPIcons\\Check",
+      "filePath": "Lib\\PPIcons\\Check.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Select.php"
+    }
+  ],
+  "ChevronDown": [
+    {
+      "className": "Lib\\PPIcons\\ChevronDown",
+      "filePath": "Lib\\PPIcons\\ChevronDown.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Select.php"
+    }
+  ],
+  "ChevronUp": [
+    {
+      "className": "Lib\\PPIcons\\ChevronUp",
+      "filePath": "Lib\\PPIcons\\ChevronUp.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PHPXUI\\Select.php"
     }
   ]
 }

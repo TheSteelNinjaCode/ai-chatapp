@@ -1,4 +1,12 @@
 {
+  "app\\_components\\Config": {
+    "filePath": "app\\_components\\Config.php",
+    "baseDir": "src"
+  },
+  "app\\_components\\SelectAIModel": {
+    "filePath": "app\\_components\\SelectAIModel.php",
+    "baseDir": "src"
+  },
   "app\\_components\\ToggleTheme": {
     "filePath": "app\\_components\\ToggleTheme.php",
     "baseDir": "src"
@@ -9,6 +17,46 @@
   },
   "Lib\\PHPXUI\\Portal": {
     "filePath": "Lib\\PHPXUI\\Portal.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\Select": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectTrigger": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectContent": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectGroup": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectLabel": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectItem": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectSeparator": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectScrollUpButton": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectScrollDownButton": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
+    "baseDir": "src"
+  },
+  "Lib\\PHPXUI\\SelectValue": {
+    "filePath": "Lib\\PHPXUI\\Select.php",
     "baseDir": "src"
   },
   "Lib\\PHPXUI\\Slot": {
@@ -57,6 +105,10 @@
   },
   "Lib\\PPIcons\\Ellipsis": {
     "filePath": "Lib\\PPIcons\\Ellipsis.php",
+    "baseDir": "src"
+  },
+  "Lib\\PPIcons\\MessageSquare": {
+    "filePath": "Lib\\PPIcons\\MessageSquare.php",
     "baseDir": "src"
   },
   "Lib\\PPIcons\\Minus": {

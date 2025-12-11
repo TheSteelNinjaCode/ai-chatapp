@@ -1,9 +1,13 @@
 [
   "./src/app/error.php",
   "./src/app/globals.css",
+  "./src/app/inc/chat-list.php",
   "./src/app/index.php",
   "./src/app/layout.php",
   "./src/app/not-found.php",
+  "./src/app/test/index.php",
+  "./src/app/_components/Config.php",
+  "./src/app/_components/SelectAIModel.php",
   "./src/app/_components/ToggleTheme.php",
   "./public/.htaccess",
   "./public/assets/images/file.svg",

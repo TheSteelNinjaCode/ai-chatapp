@@ -5,7 +5,17 @@
         "isCacheable": true,
         "cacheTtl": 0,
         "includedFiles": [
-            "C:\\xampp\\htdocs\\projects\\prisma-php\\posts\\ai-chatapp\\src\\app\\index.php"
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
+        ]
+    },
+    "test": {
+        "url": "test",
+        "fileName": "test",
+        "isCacheable": true,
+        "cacheTtl": 0,
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\test\\index.php"
         ]
     }
 }
