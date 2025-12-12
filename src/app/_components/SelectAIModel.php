@@ -27,8 +27,8 @@ class SelectAIModel extends PHPX
         return <<<HTML
         <div {$attributes}>
             <Select>
-                <SelectTrigger class="w-[180px] border-none">
-                    <SelectValue placeholder="PulsePoint AI 4.0" />
+                <SelectTrigger class="w-[180px] border-none bg-transparent dark:bg-transparent">
+                    <SelectValue placeholder="GPT-4" />
                 </SelectTrigger>
                 <SelectContent>
                     <SelectGroup>

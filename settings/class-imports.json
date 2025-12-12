@@ -63,6 +63,18 @@
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
     }
   ],
+  "SelectTrigger": [
+    {
+      "className": "Lib\\PHPXUI\\SelectTrigger",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\Config.php"
+    },
+    {
+      "className": "Lib\\PHPXUI\\SelectTrigger",
+      "filePath": "Lib\\PHPXUI\\Select.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
+    }
+  ],
   "PHPX": [
     {
       "className": "PP\\PHPX\\PHPX",
@@ -200,13 +212,6 @@
   "SelectLabel": [
     {
       "className": "Lib\\PHPXUI\\SelectLabel",
-      "filePath": "Lib\\PHPXUI\\Select.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
-    }
-  ],
-  "SelectTrigger": [
-    {
-      "className": "Lib\\PHPXUI\\SelectTrigger",
       "filePath": "Lib\\PHPXUI\\Select.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\_components\\SelectAIModel.php"
     }

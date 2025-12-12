@@ -1,4 +1,5 @@
 [
+  "./src/app/api/chat-stream/route.php",
   "./src/app/error.php",
   "./src/app/globals.css",
   "./src/app/inc/chat-list.php",

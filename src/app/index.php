@@ -18,8 +18,6 @@ use PP\IncludeTracker;
             <?php IncludeTracker::render(APP_PATH . '/inc/chat-list.php') ?>
         </nav>
 
-
-
         <div class="p-4 border-t border-border">
             <button class="flex items-center gap-3 w-full px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 <div class="h-8 w-8 rounded-full bg-secondary flex items-center justify-center text-xs text-foreground font-bold">JA</div>
