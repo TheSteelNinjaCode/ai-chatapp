@@ -6,6 +6,27 @@
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
     }
   ],
+  "Button": [
+    {
+      "className": "Lib\\PHPXUI\\Button",
+      "filePath": "Lib\\PHPXUI\\Button.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
+    }
+  ],
+  "Bot": [
+    {
+      "className": "Lib\\PPIcons\\Bot",
+      "filePath": "Lib\\PPIcons\\Bot.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
+    }
+  ],
+  "Plus": [
+    {
+      "className": "Lib\\PPIcons\\Plus",
+      "filePath": "Lib\\PPIcons\\Plus.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
+    }
+  ],
   "Config": [
     {
       "className": "app\\_components\\Config",
@@ -124,6 +145,11 @@
     {
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Bot.php"
+    },
+    {
+      "className": "PP\\PHPX\\PHPX",
+      "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Calendar.php"
     },
     {
@@ -185,6 +211,11 @@
       "className": "PP\\PHPX\\PHPX",
       "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\PanelLeft.php"
+    },
+    {
+      "className": "PP\\PHPX\\PHPX",
+      "filePath": "..\\vendor\\tsnc\\prisma-php\\src\\PHPX\\PHPX.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\Lib\\PPIcons\\Plus.php"
     },
     {
       "className": "PP\\PHPX\\PHPX",

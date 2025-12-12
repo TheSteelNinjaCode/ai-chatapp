@@ -71,6 +71,10 @@
     "filePath": "Lib\\PPIcons\\ArrowRight.php",
     "baseDir": "src"
   },
+  "Lib\\PPIcons\\Bot": {
+    "filePath": "Lib\\PPIcons\\Bot.php",
+    "baseDir": "src"
+  },
   "Lib\\PPIcons\\Calendar": {
     "filePath": "Lib\\PPIcons\\Calendar.php",
     "baseDir": "src"
@@ -121,6 +125,10 @@
   },
   "Lib\\PPIcons\\PanelLeft": {
     "filePath": "Lib\\PPIcons\\PanelLeft.php",
+    "baseDir": "src"
+  },
+  "Lib\\PPIcons\\Plus": {
+    "filePath": "Lib\\PPIcons\\Plus.php",
     "baseDir": "src"
   },
   "Lib\\PPIcons\\Search": {

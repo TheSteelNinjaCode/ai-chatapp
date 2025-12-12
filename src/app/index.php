@@ -1,5 +1,8 @@
 <?php
 
+use Lib\PHPXUI\Button;
+use Lib\PPIcons\{Bot, Plus};
+
 use app\_components\{Config, SelectAIModel, ToggleTheme};
 use PP\IncludeTracker;
 ?>
@@ -15,6 +18,11 @@ use PP\IncludeTracker;
         </div>
 
         <nav class="flex-1 overflow-y-auto p-4 space-y-2">
+            <Button class="w-full justify-start" variant="ghost" onclick="clearChat()">
+                <Plus class="size-4" />
+                New Chat
+            </Button>
+            <div class="px-2 py-1.5 text-xs font-semibold text-muted-foreground uppercase">Recent Chats</div>
             <?php IncludeTracker::render(APP_PATH . '/inc/chat-list.php') ?>
         </nav>
 
@@ -46,62 +54,40 @@ use PP\IncludeTracker;
         </div>
     </header>
 
-    <main class="col-start-2 row-start-2 overflow-y-auto p-4 md:p-10 space-y-8 scroll-smooth">
+    <main id="chatScroll" class="col-start-2 row-start-2 overflow-y-auto p-4 md:p-10 space-y-8 scroll-smooth">
 
-        <div class="flex items-start gap-4 max-w-3xl mx-auto">
-            <div class="h-8 w-8 rounded-full bg-primary shrink-0 flex items-center justify-center text-primary-foreground">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 8V4H8" />
-                    <rect width="16" height="12" x="4" y="8" rx="2" />
-                    <path d="M2 14h2" />
-                    <path d="M20 14h2" />
-                    <path d="M15 13v2" />
-                    <path d="M9 13v2" />
-                </svg>
-            </div>
-            <div class="space-y-2">
-                <div class="font-semibold text-sm">PulsePoint AI</div>
-                <div class="text-sm text-foreground/90 leading-relaxed">
-                    Hello Jefferson! How can I help you with your framework today? I can assist with Tailwind configurations, PHP components, or reactive logic.
+        <div class="max-w-3xl mx-auto space-y-8">
+            <p hidden="{chat.length > 0}">¿En qué estás pensando hoy?</p>
+
+            <template pp-for="m in chat">
+                <!-- Wrapper aligns left/right -->
+                <div class="flex items-start gap-4 {m.role === 'user' ? 'flex-row-reverse' : ''}">
+
+                    <!-- Avatar -->
+                    <div class="h-8 w-8 rounded-full shrink-0 flex items-center justify-center
+                    {m.role === 'user'
+                        ? 'bg-muted text-muted-foreground font-bold text-xs'
+                        : 'bg-primary text-primary-foreground'}">
+                        {m.role === 'user' ? 'JA' : ''}
+                        <Bot class="size-4" hidden="{m.role === 'user'}" />
+                    </div>
+
+                    <!-- Message -->
+                    <div class="space-y-2 w-full">
+                        <div hidden="{m.role === 'user'}" class="font-semibold text-sm">PulsePoint AI</div>
+
+                        <div class="px-4 py-3 rounded-2xl text-sm whitespace-pre-wrap leading-relaxed
+                        {m.role === 'user'
+                            ? 'bg-secondary text-secondary-foreground rounded-tr-sm'
+                            : 'text-foreground/90'}">{m.content}</div>
+                    </div>
+
                 </div>
-            </div>
+            </template>
+
+            <div class="h-4"></div>
         </div>
 
-        <div class="flex items-start gap-4 max-w-3xl mx-auto flex-row-reverse">
-            <div class="h-8 w-8 rounded-full bg-muted shrink-0 flex items-center justify-center text-muted-foreground font-bold text-xs">JA</div>
-            <div class="space-y-2">
-                <div class="bg-secondary text-secondary-foreground px-4 py-3 rounded-2xl rounded-tr-sm text-sm">
-                    I need to create a UI for a chat app. It should use Shadcn colors and have a fixed bottom input.
-                </div>
-            </div>
-        </div>
-
-        <div class="flex items-start gap-4 max-w-3xl mx-auto">
-            <div class="h-8 w-8 rounded-full bg-primary shrink-0 flex items-center justify-center text-primary-foreground">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 8V4H8" />
-                    <rect width="16" height="12" x="4" y="8" rx="2" />
-                    <path d="M2 14h2" />
-                    <path d="M20 14h2" />
-                    <path d="M15 13v2" />
-                    <path d="M9 13v2" />
-                </svg>
-            </div>
-            <div class="space-y-2">
-                <div class="font-semibold text-sm">PulsePoint AI</div>
-                <div class="text-sm text-foreground/90 leading-relaxed">
-                    <p>I can certainly generate that for you. Using a CSS Grid with <code>grid-rows-[auto_1fr_auto]</code> is the best way to handle the layout.</p>
-                    <br />
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li><strong>Sidebar:</strong> Fixed width, spans full height.</li>
-                        <li><strong>Content:</strong> Uses <code>overflow-y-auto</code> to scroll independently.</li>
-                        <li><strong>Input:</strong> Remains fixed at the bottom.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="h-4"></div>
     </main>
 
     <footer class="col-start-2 row-start-3 p-4 md:p-6 bg-background">
@@ -117,10 +103,17 @@ use PP\IncludeTracker;
                 <textarea
                     rows="1"
                     placeholder="Message PulsePoint..."
-                    class="w-full bg-transparent border-0 focus:ring-0 resize-none py-3 max-h-32 text-sm placeholder:text-muted-foreground scrollbar-hide"
-                    style="min-height: 44px;"></textarea>
+                    class="w-full bg-transparent outline-0 border-0 focus:ring-0 resize-none py-3 max-h-32 text-sm placeholder:text-muted-foreground scrollbar-hide"
+                    style="min-height: 44px;"
+                    value="{prompt}"
+                    oninput="handleInput(event)"
+                    onkeydown="handleKeydown(event)"
+                    disabled="{disabled}"></textarea>
 
-                <button class="p-2 mb-1 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50">
+                <button
+                    class="p-2 mb-1 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
+                    onclick="sendMessage()"
+                    disabled="{disabled}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14" />
                         <path d="m12 5 7 7-7 7" />
@@ -134,3 +127,182 @@ use PP\IncludeTracker;
     </footer>
 
 </div>
+
+<script>
+    const [prompt, setPrompt] = pp.state("");
+    const [disabled, setDisabled] = pp.state(false);
+
+    // Seed with your initial assistant greeting
+    const [chat, setChat] = pp.state([]);
+
+    const SYSTEM = {
+        role: "system",
+        content: "You are PulsePoint AI, a helpful assistant for Prisma PHP, PulsePoint, and Tailwind/shadcn UI."
+    };
+
+    function handleInput(event) {
+        setPrompt(event.target.value);
+
+        // Optional: autosize textarea
+        const el = event.target;
+        el.style.height = "auto";
+        el.style.height = Math.min(el.scrollHeight, 160) + "px";
+    }
+
+    function handleKeydown(event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+            event.preventDefault();
+            sendMessage();
+        }
+    }
+
+    // Keep chat pinned to bottom on updates
+    pp.effect(() => {
+        const el = document.getElementById("chatScroll");
+        if (!el) return;
+        requestAnimationFrame(() => {
+            el.scrollTop = el.scrollHeight;
+        });
+    }, [chat]);
+
+    function clearChat() {
+        setChat([]);
+        setPrompt("");
+    }
+
+    async function sendMessage() {
+        const text = (prompt || "").trim();
+        if (!text || disabled) return;
+
+        // Snapshot history BEFORE UI mutations
+        const history = Array.isArray(chat) ? [...chat] : [];
+
+        // Add user + placeholder assistant
+        setChat(prev => [
+            ...(Array.isArray(prev) ? prev : []),
+            {
+                role: "user",
+                content: text
+            },
+            {
+                role: "assistant",
+                content: ""
+            }
+        ]);
+
+        setDisabled(true);
+        setPrompt("");
+
+        const messages = [SYSTEM, ...history, {
+            role: "user",
+            content: text
+        }];
+
+        let started = false;
+
+        try {
+            await streamChat(messages, {
+                onToken(t) {
+                    if (!started) {
+                        t = String(t).replace(/^\s+/, "");
+                        started = true;
+                    }
+
+                    setChat(prev => {
+                        const arr = Array.isArray(prev) ? [...prev] : [];
+                        const last = arr[arr.length - 1];
+
+                        if (!last || last.role !== "assistant") {
+                            arr.push({
+                                role: "assistant",
+                                content: t
+                            });
+                            return arr;
+                        }
+
+                        arr[arr.length - 1] = {
+                            ...last,
+                            content: (last.content || "") + t
+                        };
+                        return arr;
+                    });
+                },
+                onError(err) {
+                    const msg = err?.message || "Streaming error";
+                    setChat(prev => [
+                        ...(Array.isArray(prev) ? prev : []),
+                        {
+                            role: "assistant",
+                            content: `Error: ${msg}`
+                        }
+                    ]);
+                }
+            });
+        } finally {
+            setDisabled(false);
+        }
+    }
+
+    async function streamChat(messages, {
+        onToken,
+        onDone,
+        onError
+    } = {}) {
+        const res = await fetch("/api/chat-stream/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "text/event-stream"
+            },
+            body: JSON.stringify({
+                messages
+            })
+        });
+
+        if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+
+        while (true) {
+            const {
+                value,
+                done
+            } = await reader.read();
+            if (done) break;
+
+            buffer += decoder.decode(value, {
+                stream: true
+            });
+
+            const parts = buffer.split("\n\n");
+            buffer = parts.pop() || "";
+
+            for (const frame of parts) {
+                const lines = frame.split("\n");
+                let event = "message";
+                let data = "";
+
+                for (const line of lines) {
+                    if (line.startsWith("event:")) event = line.slice(6).trim();
+                    if (line.startsWith("data:")) data += line.slice(5).trim();
+                }
+
+                if (event === "token") {
+                    const payload = JSON.parse(data);
+                    onToken?.(payload.text);
+                } else if (event === "done") {
+                    onDone?.();
+                    return;
+                } else if (event === "error") {
+                    const payload = JSON.parse(data);
+                    onError?.(payload);
+                    return;
+                }
+            }
+        }
+
+        onDone?.();
+    }
+</script>
