@@ -1,12 +1,10 @@
 {
-  "MessageSquare": [
-    {
-      "className": "Lib\\PPIcons\\MessageSquare",
-      "filePath": "Lib\\PPIcons\\MessageSquare.php",
-      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
-    }
-  ],
   "Button": [
+    {
+      "className": "Lib\\PHPXUI\\Button",
+      "filePath": "Lib\\PHPXUI\\Button.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php"
+    },
     {
       "className": "Lib\\PHPXUI\\Button",
       "filePath": "Lib\\PHPXUI\\Button.php",
@@ -17,10 +15,20 @@
     {
       "className": "Lib\\PPIcons\\Bot",
       "filePath": "Lib\\PPIcons\\Bot.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php"
+    },
+    {
+      "className": "Lib\\PPIcons\\Bot",
+      "filePath": "Lib\\PPIcons\\Bot.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
     }
   ],
   "Plus": [
+    {
+      "className": "Lib\\PPIcons\\Plus",
+      "filePath": "Lib\\PPIcons\\Plus.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php"
+    },
     {
       "className": "Lib\\PPIcons\\Plus",
       "filePath": "Lib\\PPIcons\\Plus.php",
@@ -31,10 +39,20 @@
     {
       "className": "app\\_components\\Config",
       "filePath": "app\\_components\\Config.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php"
+    },
+    {
+      "className": "app\\_components\\Config",
+      "filePath": "app\\_components\\Config.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
     }
   ],
   "SelectAIModel": [
+    {
+      "className": "app\\_components\\SelectAIModel",
+      "filePath": "app\\_components\\SelectAIModel.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php"
+    },
     {
       "className": "app\\_components\\SelectAIModel",
       "filePath": "app\\_components\\SelectAIModel.php",
@@ -45,7 +63,19 @@
     {
       "className": "app\\_components\\ToggleTheme",
       "filePath": "app\\_components\\ToggleTheme.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php"
+    },
+    {
+      "className": "app\\_components\\ToggleTheme",
+      "filePath": "app\\_components\\ToggleTheme.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\index.php"
+    }
+  ],
+  "MessageSquare": [
+    {
+      "className": "Lib\\PPIcons\\MessageSquare",
+      "filePath": "Lib\\PPIcons\\MessageSquare.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
     }
   ],
   "Select": [

@@ -537,6 +537,151 @@
         "uniqueFields": [],
         "uniqueIndexes": [],
         "isGenerated": false
+      },
+      {
+        "name": "CareerOption",
+        "dbName": null,
+        "schema": null,
+        "fields": [
+          {
+            "name": "id",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": false,
+            "isId": true,
+            "isReadOnly": false,
+            "hasDefaultValue": true,
+            "type": "Int",
+            "nativeType": null,
+            "default": {
+              "name": "autoincrement",
+              "args": []
+            },
+            "isGenerated": false,
+            "isUpdatedAt": false
+          },
+          {
+            "name": "code",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": true,
+            "isId": false,
+            "isReadOnly": false,
+            "hasDefaultValue": false,
+            "type": "Int",
+            "nativeType": null,
+            "isGenerated": false,
+            "isUpdatedAt": false
+          },
+          {
+            "name": "career",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": false,
+            "isId": false,
+            "isReadOnly": false,
+            "hasDefaultValue": false,
+            "type": "String",
+            "nativeType": null,
+            "isGenerated": false,
+            "isUpdatedAt": false
+          },
+          {
+            "name": "shift",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": false,
+            "isId": false,
+            "isReadOnly": false,
+            "hasDefaultValue": false,
+            "type": "String",
+            "nativeType": null,
+            "isGenerated": false,
+            "isUpdatedAt": false
+          },
+          {
+            "name": "level",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": false,
+            "isId": false,
+            "isReadOnly": false,
+            "hasDefaultValue": false,
+            "type": "String",
+            "nativeType": null,
+            "isGenerated": false,
+            "isUpdatedAt": false
+          },
+          {
+            "name": "area",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": false,
+            "isId": false,
+            "isReadOnly": false,
+            "hasDefaultValue": false,
+            "type": "String",
+            "nativeType": null,
+            "isGenerated": false,
+            "isUpdatedAt": false
+          },
+          {
+            "name": "description",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": false,
+            "isId": false,
+            "isReadOnly": false,
+            "hasDefaultValue": false,
+            "type": "String",
+            "nativeType": null,
+            "isGenerated": false,
+            "isUpdatedAt": false
+          },
+          {
+            "name": "createdAt",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": false,
+            "isId": false,
+            "isReadOnly": false,
+            "hasDefaultValue": true,
+            "type": "DateTime",
+            "nativeType": null,
+            "default": {
+              "name": "now",
+              "args": []
+            },
+            "isGenerated": false,
+            "isUpdatedAt": false
+          },
+          {
+            "name": "updatedAt",
+            "kind": "scalar",
+            "isList": false,
+            "isRequired": true,
+            "isUnique": false,
+            "isId": false,
+            "isReadOnly": false,
+            "hasDefaultValue": false,
+            "type": "DateTime",
+            "nativeType": null,
+            "isGenerated": false,
+            "isUpdatedAt": true
+          }
+        ],
+        "primaryKey": null,
+        "uniqueFields": [],
+        "uniqueIndexes": [],
+        "isGenerated": false
       }
     ],
     "types": [],
@@ -618,6 +763,66 @@
         "fields": [
           {
             "name": "chatId"
+          }
+        ]
+      },
+      {
+        "model": "CareerOption",
+        "type": "id",
+        "isDefinedOnField": true,
+        "fields": [
+          {
+            "name": "id"
+          }
+        ]
+      },
+      {
+        "model": "CareerOption",
+        "type": "unique",
+        "isDefinedOnField": true,
+        "fields": [
+          {
+            "name": "code"
+          }
+        ]
+      },
+      {
+        "model": "CareerOption",
+        "type": "normal",
+        "isDefinedOnField": false,
+        "fields": [
+          {
+            "name": "career"
+          }
+        ]
+      },
+      {
+        "model": "CareerOption",
+        "type": "normal",
+        "isDefinedOnField": false,
+        "fields": [
+          {
+            "name": "shift"
+          }
+        ]
+      },
+      {
+        "model": "CareerOption",
+        "type": "normal",
+        "isDefinedOnField": false,
+        "fields": [
+          {
+            "name": "level"
+          }
+        ]
+      },
+      {
+        "model": "CareerOption",
+        "type": "normal",
+        "isDefinedOnField": false,
+        "fields": [
+          {
+            "name": "area"
           }
         ]
       }
@@ -4037,6 +4242,999 @@
           ]
         },
         {
+          "name": "CareerOptionWhereInput",
+          "meta": {
+            "source": "CareerOption",
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "AND",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "OR",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "NOT",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "IntFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "IntFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTimeFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTimeFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionOrderByWithRelationInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": 1,
+            "minNumFields": 0
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionWhereUniqueInput",
+          "meta": {
+            "source": "CareerOption",
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": 1,
+            "fields": [
+              "id",
+              "code"
+            ]
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "OR",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "NOT",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "CareerOptionWhereInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTimeFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTimeFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": 1,
+            "minNumFields": 0
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "_count",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionCountOrderByAggregateInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "_avg",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionAvgOrderByAggregateInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "_max",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionMaxOrderByAggregateInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "_min",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionMinOrderByAggregateInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "_sum",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionSumOrderByAggregateInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionScalarWhereWithAggregatesInput",
+          "meta": {
+            "source": "CareerOption",
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "AND",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionScalarWhereWithAggregatesInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "CareerOptionScalarWhereWithAggregatesInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "OR",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionScalarWhereWithAggregatesInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "NOT",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "CareerOptionScalarWhereWithAggregatesInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "CareerOptionScalarWhereWithAggregatesInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": true
+                }
+              ]
+            },
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "IntWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "IntWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "StringWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTimeWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTimeWithAggregatesFilter",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                },
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "UserCreateInput",
           "meta": {
             "grouping": "User"
@@ -7162,6 +8360,1014 @@
                 },
                 {
                   "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionCreateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "code",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionUncheckedCreateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionUpdateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "IntFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "DateTimeFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "DateTimeFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionUncheckedUpdateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "IntFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "IntFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "DateTimeFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "DateTimeFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionCreateManyInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionUpdateManyMutationInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "IntFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "DateTimeFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "DateTimeFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": null,
+            "minNumFields": null
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "IntFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "Int",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "IntFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "StringFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "DateTimeFieldUpdateOperationsInput",
+                  "namespace": "prisma",
+                  "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "DateTime",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "DateTimeFieldUpdateOperationsInput",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -11267,6 +13473,469 @@
                   "type": "NestedEnumMessageRoleFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": 1,
+            "minNumFields": 1
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionAvgOrderByAggregateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": 1,
+            "minNumFields": 1
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": 1,
+            "minNumFields": 1
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": 1,
+            "minNumFields": 1
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "career",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "shift",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "level",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "area",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "description",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "createdAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "updatedAt",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionSumOrderByAggregateInput",
+          "meta": {
+            "grouping": "CareerOption"
+          },
+          "constraints": {
+            "maxNumFields": 1,
+            "minNumFields": 1
+          },
+          "fields": [
+            {
+              "name": "id",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "SortOrder",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
                   "isList": false
                 }
               ]
@@ -23976,6 +26645,537 @@
                 "location": "outputObjectTypes",
                 "isList": false
               }
+            },
+            {
+              "name": "findFirstCareerOption",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "orderBy",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionOrderByWithRelationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": true
+                    },
+                    {
+                      "type": "CareerOptionOrderByWithRelationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "cursor",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "take",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "skip",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "distinct",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionScalarFieldEnum",
+                      "namespace": "prisma",
+                      "location": "enumTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionScalarFieldEnum",
+                      "namespace": "prisma",
+                      "location": "enumTypes",
+                      "isList": true
+                    }
+                  ]
+                }
+              ],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "findFirstCareerOptionOrThrow",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "orderBy",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionOrderByWithRelationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": true
+                    },
+                    {
+                      "type": "CareerOptionOrderByWithRelationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "cursor",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "take",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "skip",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "distinct",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionScalarFieldEnum",
+                      "namespace": "prisma",
+                      "location": "enumTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionScalarFieldEnum",
+                      "namespace": "prisma",
+                      "location": "enumTypes",
+                      "isList": true
+                    }
+                  ]
+                }
+              ],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "findManyCareerOption",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "orderBy",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionOrderByWithRelationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": true
+                    },
+                    {
+                      "type": "CareerOptionOrderByWithRelationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "cursor",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "take",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "skip",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "distinct",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionScalarFieldEnum",
+                      "namespace": "prisma",
+                      "location": "enumTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionScalarFieldEnum",
+                      "namespace": "prisma",
+                      "location": "enumTypes",
+                      "isList": true
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
+              }
+            },
+            {
+              "name": "aggregateCareerOption",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "orderBy",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionOrderByWithRelationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": true
+                    },
+                    {
+                      "type": "CareerOptionOrderByWithRelationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "cursor",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "take",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "skip",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "AggregateCareerOption",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "groupByCareerOption",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "orderBy",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionOrderByWithAggregationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": true
+                    },
+                    {
+                      "type": "CareerOptionOrderByWithAggregationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "by",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionScalarFieldEnum",
+                      "namespace": "prisma",
+                      "location": "enumTypes",
+                      "isList": true
+                    },
+                    {
+                      "type": "CareerOptionScalarFieldEnum",
+                      "namespace": "prisma",
+                      "location": "enumTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "having",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionScalarWhereWithAggregatesInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "take",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "skip",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "CareerOptionGroupByOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": true
+              }
+            },
+            {
+              "name": "findUniqueCareerOption",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "findUniqueCareerOptionOrThrow",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
             }
           ]
         },
@@ -25479,6 +28679,380 @@
               }
             },
             {
+              "name": "createOneCareerOption",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionCreateInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionUncheckedCreateInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "upsertOneCareerOption",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "create",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionCreateInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionUncheckedCreateInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "update",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionUpdateInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionUncheckedUpdateInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "createManyCareerOption",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionCreateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionCreateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": true
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "AffectedRowsOutput",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "createManyCareerOptionAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionCreateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionCreateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": true
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "CreateManyCareerOptionAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
+              }
+            },
+            {
+              "name": "deleteOneCareerOption",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "updateOneCareerOption",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionUpdateInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionUncheckedUpdateInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereUniqueInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOption",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "updateManyCareerOption",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "AffectedRowsOutput",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "updateManyCareerOptionAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CareerOptionUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyCareerOptionAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
+              }
+            },
+            {
+              "name": "deleteManyCareerOption",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CareerOptionWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "AffectedRowsOutput",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
               "name": "executeRaw",
               "args": [
                 {
@@ -26210,6 +29784,216 @@
               "isNullable": true,
               "outputType": {
                 "type": "MessageMaxAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "AggregateCareerOption",
+          "fields": [
+            {
+              "name": "_count",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionCountAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "_avg",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionAvgAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "_sum",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionSumAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "_min",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionMinAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "_max",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionMaxAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionGroupByOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "career",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "shift",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "level",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "area",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "description",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "createdAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "updatedAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "_count",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionCountAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "_avg",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionAvgAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "_sum",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionSumAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "_min",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionMinAggregateOutputType",
+                "namespace": "prisma",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "_max",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "CareerOptionMaxAggregateOutputType",
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
@@ -27220,6 +31004,351 @@
               }
             }
           ]
+        },
+        {
+          "name": "CareerOptionCountAggregateOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "career",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "shift",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "level",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "area",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "description",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "createdAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "updatedAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "_all",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionAvgAggregateOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Float",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Float",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionSumAggregateOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionMinAggregateOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "career",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "shift",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "level",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "area",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "description",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "createdAt",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "updatedAt",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "CareerOptionMaxAggregateOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "career",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "shift",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "level",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "area",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "description",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "createdAt",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "updatedAt",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
         }
       ],
       "model": [
@@ -27855,6 +31984,101 @@
           ]
         },
         {
+          "name": "CareerOption",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "career",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "shift",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "level",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "area",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "description",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "createdAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "updatedAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
           "name": "CreateManyUserAndReturnOutputType",
           "fields": [
             {
@@ -28449,6 +32673,196 @@
               }
             }
           ]
+        },
+        {
+          "name": "CreateManyCareerOptionAndReturnOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "career",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "shift",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "level",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "area",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "description",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "createdAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "updatedAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateManyCareerOptionAndReturnOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "code",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "career",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "shift",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "level",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "area",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "description",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "createdAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "updatedAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
         }
       ]
     },
@@ -28501,6 +32915,20 @@
             "promptTokens",
             "completionTokens",
             "chatId"
+          ]
+        },
+        {
+          "name": "CareerOptionScalarFieldEnum",
+          "values": [
+            "id",
+            "code",
+            "career",
+            "shift",
+            "level",
+            "area",
+            "description",
+            "createdAt",
+            "updatedAt"
           ]
         },
         {
@@ -28792,6 +33220,25 @@
         "updateManyAndReturn": "updateManyMessageAndReturn",
         "updateOne": "updateOneMessage",
         "upsertOne": "upsertOneMessage"
+      },
+      {
+        "model": "CareerOption",
+        "aggregate": "aggregateCareerOption",
+        "createMany": "createManyCareerOption",
+        "createManyAndReturn": "createManyCareerOptionAndReturn",
+        "createOne": "createOneCareerOption",
+        "deleteMany": "deleteManyCareerOption",
+        "deleteOne": "deleteOneCareerOption",
+        "findFirst": "findFirstCareerOption",
+        "findFirstOrThrow": "findFirstCareerOptionOrThrow",
+        "findMany": "findManyCareerOption",
+        "findUnique": "findUniqueCareerOption",
+        "findUniqueOrThrow": "findUniqueCareerOptionOrThrow",
+        "groupBy": "groupByCareerOption",
+        "updateMany": "updateManyCareerOption",
+        "updateManyAndReturn": "updateManyCareerOptionAndReturn",
+        "updateOne": "updateOneCareerOption",
+        "upsertOne": "upsertOneCareerOption"
       }
     ],
     "otherOperations": {

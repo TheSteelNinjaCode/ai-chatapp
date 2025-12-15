@@ -15,6 +15,7 @@ use Dotenv\Dotenv;
  * @property UserRole $userRole
  * @property Chat $chat
  * @property Message $message
+ * @property CareerOption $careerOption
  */
 final class Prisma
 {

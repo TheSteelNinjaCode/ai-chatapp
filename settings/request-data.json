@@ -9,13 +9,14 @@
             "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
         ]
     },
-    "test": {
-        "url": "test",
-        "fileName": "test",
+    "chat-with-tool": {
+        "url": "chat-with-tool",
+        "fileName": "chat-with-tool",
         "isCacheable": true,
         "cacheTtl": 0,
         "includedFiles": [
-            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\test\\index.php"
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
         ]
     }
 }
