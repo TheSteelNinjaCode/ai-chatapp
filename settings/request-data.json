@@ -18,5 +18,14 @@
             "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php",
             "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
         ]
+    },
+    "chat-with-save": {
+        "url": "chat-with-save",
+        "fileName": "chat-with-save",
+        "isCacheable": true,
+        "cacheTtl": 0,
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php"
+        ]
     }
 }

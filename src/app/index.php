@@ -5,6 +5,18 @@ use Lib\PPIcons\{Bot, Plus};
 
 use app\_components\{Config, SelectAIModel, ToggleTheme};
 use PP\IncludeTracker;
+
+use Lib\Prisma\Classes\Prisma;
+
+$prisma = Prisma::getInstance();
+
+$chats = $prisma->chat->findMany([
+    'orderBy' => [
+        'updatedAt' => 'desc',
+    ],
+    'take' => 10,
+]);
+
 ?>
 
 <div class="grid h-screen w-full grid-cols-[280px_1fr] grid-rows-[60px_1fr_auto]">
@@ -23,7 +35,9 @@ use PP\IncludeTracker;
                 New Chat
             </Button>
             <div class="px-2 py-1.5 text-xs font-semibold text-muted-foreground uppercase">Recent Chats</div>
-            <?php IncludeTracker::render(APP_PATH . '/inc/chat-list.php') ?>
+            <?php IncludeTracker::render(APP_PATH . '/inc/chat-list.php',[
+                'chats' => '{chats}'
+            ]) ?>
         </nav>
 
         <div class="p-4 border-t border-border">
@@ -131,6 +145,7 @@ use PP\IncludeTracker;
 <script>
     const [prompt, setPrompt] = pp.state("");
     const [disabled, setDisabled] = pp.state(false);
+    const [chats, setChats] = pp.state(<?= json_encode($chats) ?>);
 
     // Seed with your initial assistant greeting
     const [chat, setChat] = pp.state([]);

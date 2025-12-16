@@ -2,6 +2,7 @@
   "./src/app/api/chat-stream/route.php",
   "./src/app/api/chat-stream-with-tool/route.php",
   "./src/app/api/chat-title/route.php",
+  "./src/app/chat-with-save/index.php",
   "./src/app/chat-with-tool/index.php",
   "./src/app/error.php",
   "./src/app/globals.css",

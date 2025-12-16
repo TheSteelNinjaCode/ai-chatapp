@@ -2,17 +2,6 @@
 
 use Lib\PPIcons\MessageSquare;
 
-use Lib\Prisma\Classes\Prisma;
-
-$prisma = Prisma::getInstance();
-
-$chats = $prisma->chat->findMany([
-    'orderBy' => [
-        'updatedAt' => 'desc',
-    ],
-    'take' => 10,
-]);
-
 ?>
 
 <template pp-for="chat in chats">
@@ -23,6 +12,5 @@ $chats = $prisma->chat->findMany([
 </template>
 
 <script>
-    const [chats, setChats] = pp.state(<?= json_encode($chats) ?>);
-    const [selectedChat, setSelectedChat] = pp.state(<?= json_encode($chats[0]->id) ?>);
+    const [selectedChat, setSelectedChat] = pp.state(null);
 </script>

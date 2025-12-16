@@ -10,9 +10,9 @@ datasource db {
 }
 
 enum MessageRole {
-  SYSTEM // System prompt (e.g. "You are a helpful assistant")
-  USER // The user's input
-  ASSISTANT // The AI's response
+  system // System prompt (e.g. "You are a helpful assistant")
+  user // The user's input
+  assistant // The AI's response
 }
 
 model User {

@@ -5,15 +5,15 @@
         "name": "MessageRole",
         "values": [
           {
-            "name": "SYSTEM",
+            "name": "system",
             "dbName": null
           },
           {
-            "name": "USER",
+            "name": "user",
             "dbName": null
           },
           {
-            "name": "ASSISTANT",
+            "name": "assistant",
             "dbName": null
           }
         ],
@@ -32950,9 +32950,9 @@
         {
           "name": "MessageRole",
           "values": [
-            "SYSTEM",
-            "USER",
-            "ASSISTANT"
+            "system",
+            "user",
+            "assistant"
           ]
         }
       ]

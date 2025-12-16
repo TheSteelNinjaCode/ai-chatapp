@@ -25,6 +25,7 @@
     "./src/app/index.php",
     "./src/app/globals.css",
     "./prisma/schema.prisma",
-    "./prisma/seed.ts"
+    "./prisma/seed.ts",
+    "./settings/prisma-schema.json"
   ]
 }

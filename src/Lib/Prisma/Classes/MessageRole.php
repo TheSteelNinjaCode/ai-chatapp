@@ -6,7 +6,7 @@ namespace Lib\Prisma\Classes;
 
 enum MessageRole: string
 {
-    case SYSTEM = 'SYSTEM';
-    case USER = 'USER';
-    case ASSISTANT = 'ASSISTANT';
+    case system = 'system';
+    case user = 'user';
+    case assistant = 'assistant';
 }
