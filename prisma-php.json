@@ -26,6 +26,7 @@
     "./src/app/globals.css",
     "./prisma/schema.prisma",
     "./prisma/seed.ts",
-    "./settings/prisma-schema.json"
+    "./settings/prisma-schema.json",
+    ".env"
   ]
 }

@@ -25,7 +25,38 @@
         "isCacheable": true,
         "cacheTtl": 0,
         "includedFiles": [
-            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php"
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
+        ]
+    },
+    "chat-with-save?": {
+        "url": "chat-with-save?",
+        "fileName": "chat-with-save_",
+        "isCacheable": true,
+        "cacheTtl": 0,
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
+        ]
+    },
+    "chat-with-save?chat=cmj97xw270001o0r3xch5ep4a": {
+        "url": "chat-with-save?chat=cmj97xw270001o0r3xch5ep4a",
+        "fileName": "chat-with-save_chat_cmj97xw270001o0r3xch5ep4a",
+        "isCacheable": true,
+        "cacheTtl": 0,
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
+        ]
+    },
+    "chat-with-save?chat=cmj97v26m0001o0r3zwf0kjtp": {
+        "url": "chat-with-save?chat=cmj97v26m0001o0r3zwf0kjtp",
+        "fileName": "chat-with-save_chat_cmj97v26m0001o0r3zwf0kjtp",
+        "isCacheable": true,
+        "cacheTtl": 0,
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
         ]
     }
 }
