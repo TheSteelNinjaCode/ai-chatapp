@@ -9,16 +9,6 @@
             "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
         ]
     },
-    "chat-with-tool": {
-        "url": "chat-with-tool",
-        "fileName": "chat-with-tool",
-        "isCacheable": true,
-        "cacheTtl": 0,
-        "includedFiles": [
-            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-tool\\index.php",
-            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
-        ]
-    },
     "chat-with-save": {
         "url": "chat-with-save",
         "fileName": "chat-with-save",
@@ -39,23 +29,53 @@
             "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
         ]
     },
-    "chat-with-save?chat=cmj97xw270001o0r3xch5ep4a": {
-        "url": "chat-with-save?chat=cmj97xw270001o0r3xch5ep4a",
-        "fileName": "chat-with-save_chat_cmj97xw270001o0r3xch5ep4a",
+    "chat-with-ollama": {
+        "url": "chat-with-ollama",
+        "fileName": "chat-with-ollama",
         "isCacheable": true,
         "cacheTtl": 0,
         "includedFiles": [
-            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php",
             "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
         ]
     },
-    "chat-with-save?chat=cmj97v26m0001o0r3zwf0kjtp": {
-        "url": "chat-with-save?chat=cmj97v26m0001o0r3zwf0kjtp",
-        "fileName": "chat-with-save_chat_cmj97v26m0001o0r3zwf0kjtp",
+    "chat-with-ollama?": {
+        "url": "chat-with-ollama?",
+        "fileName": "chat-with-ollama_",
         "isCacheable": true,
         "cacheTtl": 0,
         "includedFiles": [
-            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
+        ]
+    },
+    "chat-with-ollama?chat=cmjdcn03a00016gr30dmb9pvs": {
+        "url": "chat-with-ollama?chat=cmjdcn03a00016gr30dmb9pvs",
+        "fileName": "chat-with-ollama_chat_cmjdcn03a00016gr30dmb9pvs",
+        "isCacheable": true,
+        "cacheTtl": 0,
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
+        ]
+    },
+    "chat-with-ollama?chat=cmjdcpk4900016gr3gd24ukvk": {
+        "url": "chat-with-ollama?chat=cmjdcpk4900016gr3gd24ukvk",
+        "fileName": "chat-with-ollama_chat_cmjdcpk4900016gr3gd24ukvk",
+        "isCacheable": true,
+        "cacheTtl": 0,
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php",
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
+        ]
+    },
+    "chat-with-ollama?chat=cmjdcepvq00016gr3ujc27zvt": {
+        "url": "chat-with-ollama?chat=cmjdcepvq00016gr3ujc27zvt",
+        "fileName": "chat-with-ollama_chat_cmjdcepvq00016gr3ujc27zvt",
+        "isCacheable": true,
+        "cacheTtl": 0,
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php",
             "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\inc\\chat-list.php"
         ]
     }

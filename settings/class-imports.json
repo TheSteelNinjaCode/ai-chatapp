@@ -3,6 +3,11 @@
     {
       "className": "Lib\\PHPXUI\\Button",
       "filePath": "Lib\\PHPXUI\\Button.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php"
+    },
+    {
+      "className": "Lib\\PHPXUI\\Button",
+      "filePath": "Lib\\PHPXUI\\Button.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php"
     },
     {
@@ -17,6 +22,11 @@
     }
   ],
   "Bot": [
+    {
+      "className": "Lib\\PPIcons\\Bot",
+      "filePath": "Lib\\PPIcons\\Bot.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php"
+    },
     {
       "className": "Lib\\PPIcons\\Bot",
       "filePath": "Lib\\PPIcons\\Bot.php",
@@ -37,6 +47,11 @@
     {
       "className": "Lib\\PPIcons\\Plus",
       "filePath": "Lib\\PPIcons\\Plus.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php"
+    },
+    {
+      "className": "Lib\\PPIcons\\Plus",
+      "filePath": "Lib\\PPIcons\\Plus.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php"
     },
     {
@@ -51,6 +66,11 @@
     }
   ],
   "Config": [
+    {
+      "className": "app\\_components\\Config",
+      "filePath": "app\\_components\\Config.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php"
+    },
     {
       "className": "app\\_components\\Config",
       "filePath": "app\\_components\\Config.php",
@@ -71,6 +91,11 @@
     {
       "className": "app\\_components\\SelectAIModel",
       "filePath": "app\\_components\\SelectAIModel.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php"
+    },
+    {
+      "className": "app\\_components\\SelectAIModel",
+      "filePath": "app\\_components\\SelectAIModel.php",
       "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-save\\index.php"
     },
     {
@@ -85,6 +110,11 @@
     }
   ],
   "ToggleTheme": [
+    {
+      "className": "app\\_components\\ToggleTheme",
+      "filePath": "app\\_components\\ToggleTheme.php",
+      "importer": "C:\\xampp\\htdocs\\projects\\prisma-php\\ai-chatapp\\src\\app\\chat-with-ollama\\index.php"
+    },
     {
       "className": "app\\_components\\ToggleTheme",
       "filePath": "app\\_components\\ToggleTheme.php",

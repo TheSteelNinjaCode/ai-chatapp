@@ -36,7 +36,7 @@ final class CareerTools
                         ['shift' => ['contains' => $query]],
                     ]
                 ],
-                'take' => 5
+                'take' => 10 // Increased from 5 to gives better context
             ]);
 
             if (empty($careers)) {
@@ -51,13 +51,15 @@ final class CareerTools
 
     #[McpTool(
         name: 'get-all-careers',
-        description: 'List all available university careers and degrees.'
+        description: 'Get a summary count and list of all available university careers.'
     )]
     public function getAllCareers(): string
     {
         try {
-            // Using findMany() as requested
-            // Added 'take' to prevent token limit errors if list is huge
+            // 1. Get the REAL total count from the database
+            $totalCount = $this->prisma->careerOption->count();
+
+            // 2. Fetch the list (limit to 50 to avoid crashing the AI context)
             $careers = $this->prisma->careerOption->findMany([
                 'orderBy' => ['career' => 'asc'],
                 'take' => 50
@@ -67,21 +69,26 @@ final class CareerTools
                 return "No careers found in the database.";
             }
 
-            return $this->formatCareers($careers);
+            // 3. Explicitly tell the AI the total count
+            $output = "DATABASE REPORT: There are exactly **{$totalCount}** careers in the database.\n";
+
+            // 4. Append the list
+            $output .= $this->formatCareers($careers);
+
+            return $output;
         } catch (Throwable $e) {
             return "Database Error: " . $e->getMessage();
         }
     }
 
-    // Helper to keep formatting consistent across both tools
     private function formatCareers(array $careers): string
     {
-        $output = "Found " . count($careers) . " options:\n";
+        $output = "List of fetched results:\n";
         foreach ($careers as $c) {
-            // Using object syntax ($c->prop) as per your snippet
             $output .= "- **{$c->career}** ({$c->level})\n";
             $output .= "  Shift: {$c->shift} | Area: {$c->area}\n";
-            $output .= "  Desc: " . substr($c->description, 0, 100) . "...\n\n";
+            // Shortened description to save tokens
+            $output .= "  Desc: " . substr((string)$c->description, 0, 80) . "...\n\n";
         }
         return $output;
     }
